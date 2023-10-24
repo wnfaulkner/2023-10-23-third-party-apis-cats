@@ -3,10 +3,10 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/fact', async function(req, res, next) {
-  const catFacts = await fetch('https://catfact.ninja/facts')
+  const catFact = await fetch('https://catfact.ninja/fact')
   .then(res => res.json())
-  console.log(catFacts)
-  res.render('cat/fact', {catFacts})
+  // console.log(catFact)
+  res.render('cat/fact', {catFact})
 });
 
 module.exports = router;
